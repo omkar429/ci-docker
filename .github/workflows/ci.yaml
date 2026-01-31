@@ -1,0 +1,26 @@
+name: CI pipeline
+
+
+on: push
+
+
+jobs:
+  interegestion:
+    runs-on: ubuntu latest
+
+    steps:
+      - name: Checkout repro
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v2
+        with: 
+          python-verstion: '3.10'
+      - name: install dipedensy
+        run: |
+          pip install -r requerements.txt
+      - name: run app
+        run: |
+          python app.py
+
+        
+
