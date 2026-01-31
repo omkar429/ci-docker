@@ -20,7 +20,7 @@ jobs:
           pip install -r requerements.txt
       - name: run app
         run: |
-          python app.py
+          pytest
 
         
 
