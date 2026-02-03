@@ -38,3 +38,7 @@ def table():
             table = [f"{n} x {i} = {n*i}" for i in range(1, 11)]
     return render_template_string(html_template, table=table)
 
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
